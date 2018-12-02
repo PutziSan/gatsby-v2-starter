@@ -9,4 +9,11 @@ Um Bilder anzuzeigen und zu optimieren, nutzen wir [gatsby-image](https://www.ga
 
 ## gatsby-plugin-offline
 
-[gatsby-plugin-offline](https://www.gatsbyjs.org/packages/gatsby-plugin-offline) adds a [workbox](https://developers.google.com/web/tools/workbox/modules/workbox-build) build to make the generated app PWA-kompatibel. 
+[gatsby-plugin-offline](https://www.gatsbyjs.org/packages/gatsby-plugin-offline) adds a [workbox](https://developers.google.com/web/tools/workbox/modules/workbox-build) build to make the generated app PWA-kompatibel.
+
+## gatsby-wordpress-source
+
+todo:
+
+1. checke im wp-admin-panel dass unter `settings` > `Permalinks` (e.g. https://wp.domain.de/wp-admin/options-permalink.php) `post name` ausgewählt ist
+1. s  

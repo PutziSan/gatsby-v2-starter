@@ -4,6 +4,7 @@ const gatsbyPluginSharp = require.resolve('gatsby-plugin-sharp')
 const gatsbyTransformerSharp = require.resolve('gatsby-transformer-sharp')
 const gatsbyPluginManifest = require.resolve('gatsby-plugin-manifest')
 const gatsbyPluginOffline = require.resolve('gatsby-plugin-offline')
+const gatsbySourceWordpress = require.resolve('gatsby-source-wordpress');
 
 const path = require('path')
 
@@ -35,6 +36,21 @@ module.exports = {
   },
   plugins: [
     gatsbyPluginReactHelmet,
+    {
+      resolve: gatsbySourceWordpress,
+      options: {
+        baseUrl: "putzisan.de",
+        protocol: "https",
+        hostingWPCOM: false,
+        // Set how many pages are retrieved per API request.
+        perPage: 100,
+        // Search and Replace Urls across WordPress content.
+        searchAndReplaceContentUrls: {
+          sourceUrl: "https://wp.putzisan.de",
+          replacementUrl: "https://putzisan.de",
+        },
+      },
+    },
     ...imageOptimisationPlugins,
     { resolve: gatsbyPluginManifest, options: manifest },
     gatsbyPluginOffline,
